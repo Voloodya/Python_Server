@@ -16,7 +16,7 @@ server_socket=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind(('0.0.0.0',2222))
 server_socket.listen(10)
 
-def serverGet (client_socket, remote_address)
+def serverGet (client_socket, remote_address):
 	while True:
 		data_request=client_socket.recv(1024)
 		if not data_request or data_request.decode('utf8').strip()=='close'=='close': break
