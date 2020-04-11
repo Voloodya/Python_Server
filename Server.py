@@ -16,11 +16,12 @@ def serverGet (client_socket, remote_address)
 		mysend (client_socket,data_request)
 	client_socket.close()
 
-server_socket=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_socket.bind(('0.0.0.0',2222))
-server_socket.listen(10)
 
 def main():
+
+	server_socket=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	server_socket.bind(('0.0.0.0',2222))
+	server_socket.listen(10)
 
 	while True:
 		client_socket, remote_address=server_socket.accept()
