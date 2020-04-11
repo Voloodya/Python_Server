@@ -9,7 +9,7 @@ def mysend (client_socket, msg):
 		totalsend=totalsend+sent
 
 
-def serverGet (client_socket, remote_address)
+def serverGet (client_socket, remote_address):
 	while True:
 		data_request=client_socket.recv(1024)
 		if not data_request or data_request.decode('utf8').strip()=='close'=='close': break
